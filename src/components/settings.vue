@@ -51,42 +51,26 @@
 </template>
 
 <script>
-    import { Component, Vue } from 'vue-property-decorator';
-    import { mapActions } from 'vuex';
+export default {
 
-
-    @Component({
-        name: "Settings",
-        computed: {
-
-        }
-    })
-    export default class Settings extends Vue {
-
-        static $el = '.widget-settings__desc-space';
-
-
+   computed: {
         data() {
             return this.$parent.$store.state;
-        }
+        },
 
-
-        check() {
-            this.$parent.$store.commit('changeConfirm');
-        }
-
-        get isBlocked() {
+        isBlocked() {
             return this.$parent.$store.getters.isBlocked
         }
-
-        get isConfirm() {
+,
+        isConfirm() {
             return this.$parent.$store.getters.isConfirm
-        }
-
-
-
-
-
+        },
+    },
+    methods: {
+        check() {
+            this.$parent.$store.commit('changeConfirm');
+        },
+    },
 
     }
 </script>

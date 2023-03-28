@@ -15,7 +15,7 @@ const Widget = {
       }).$mount(el);
 
       // After you create app
-      window.__VUE_DEVTOOLS_GLOBAL_HOOK__.Vue = window.vue.constructor;
+    //   window.__VUE_DEVTOOLS_GLOBAL_HOOK__.Vue = window.vue.constructor;
     });
 
     return true;
