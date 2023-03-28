@@ -6,8 +6,17 @@ Vue.config.devtools = true;
 Vue.config.silent = true;
 
 const Widget = {
-  render(self, func) {
-    console.log("123", self, func);
+  render(self, el) {
+    self.showProductsSearch((accountID, el) => {
+      console.log(accountID, el);
+      window.vue = new Vue({
+        store: store,
+        render: (h) => h(Settings),
+      }).$mount(el);
+
+      // After you create app
+      window.__VUE_DEVTOOLS_GLOBAL_HOOK__.Vue = window.vue.constructor;
+    });
 
     return true;
   },
@@ -22,15 +31,7 @@ const Widget = {
     return true;
   },
 
-  settings() {
-    window.vue = new Vue({
-      store: store,
-      render: (h) => h(Settings),
-    }).$mount(Settings.$el);
-
-    // After you create app
-    window.__VUE_DEVTOOLS_GLOBAL_HOOK__.Vue = window.vue.constructor;
-
+  settings(el) {
     console.debug("oneDocs settings");
   },
 
