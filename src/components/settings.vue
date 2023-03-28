@@ -67,7 +67,7 @@ export default {
         },
     },
     mounted() {
-        console.log(this.data, this.isBlocked, this.isConfirm);
+        console.log("Привет из Vue компонента", this.data, this.isBlocked, this.isConfirm);
     },
     methods: {
         check() {
