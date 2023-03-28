@@ -66,6 +66,9 @@ export default {
             return this.$parent.$store.getters.isConfirm
         },
     },
+    mounted() {
+        console.log(this.data, this.isBlocked, this.isConfirm);
+    },
     methods: {
         check() {
             this.$parent.$store.commit('changeConfirm');
