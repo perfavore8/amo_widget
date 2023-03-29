@@ -9,7 +9,7 @@ Vue.config.silent = true;
 const Widget = {
   render(self, el) {
     self.showProductsSearch((accountID, el) => {
-      console.log(accountID, el);
+      console.log("123", accountID, el);
       window.vue = new Vue({
         store: store,
         render: (h) => h(MainPage),
