@@ -13,7 +13,7 @@
             <div>
                 <label class="control-checkbox" v-bind:class="{ 'is-checked' : isConfirm }" >
                     <div class="control-checkbox__body" >
-                        <input v-on:click="check()" class="" data-value="" :checked="isConfirm" name="startcrm_confirm_checkbox" type="checkbox" value="">
+                        <input v-on:click="check()" class="" data-value="" :checked="isConfirm" name="startcrm_confirm_checkbox" type="checkbox" value="" />
                             <span class="control-checkbox__helper "></span>
                         </input>
                     </div>

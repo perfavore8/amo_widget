@@ -2,7 +2,7 @@
   "name": "amoCRM_Vue",
   "description": "Vue.js widget for amoCRM",
   "version": "1.0.0",
-  "author": "Pavel Kupreev <iamkuper@gmail.com>",
+  "author": "",
   "scripts": {
     "dev": "webpack-dev-server --hot --open",
     "build": "webpack"
