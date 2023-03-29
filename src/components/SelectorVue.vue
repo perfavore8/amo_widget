@@ -60,6 +60,25 @@ export default {
   emits: {
     select: null,
   },
+  data() {
+    return {
+      options: [],
+    };
+  },
+  mounted() {
+    nextTick(() => {
+      this.set_options();
+    });
+  },
+  watch: {
+    options_props
+  },
+  methods: {
+    set_options() {
+      options.value = [];
+      props.options_props.forEach((item) => options.value.push(item));
+    },
+  },
   setup(props, { emit }) {
     const options = ref([]);
     onMounted(() => {
