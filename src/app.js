@@ -1,6 +1,6 @@
 import Vue from "vue/dist/vue.js";
-// import Settings from "./components/settings.vue";
-import MainPage from "./components/MainPage.vue";
+import Settings from "./components/settings.vue";
+// import MainPage from "./components/MainPage.vue";
 import store from "./stores/index";
 
 Vue.config.devtools = true;
@@ -12,7 +12,7 @@ const Widget = {
       console.log("123", accountID, el);
       window.vue = new Vue({
         store: store,
-        render: (h) => h(MainPage),
+        render: (h) => h(Settings),
       }).$mount(el);
 
       // After you create app
