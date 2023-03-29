@@ -8,7 +8,7 @@
 export default {
   computed: {},
   mounted() {
-    console.log("Привет из Vue компонента 2");
+    console.log("Привет из Vue компонента 3");
   },
   methods: {},
 };
